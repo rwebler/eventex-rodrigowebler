@@ -1,6 +1,7 @@
 # Django settings for eventex project.
 
 from unipath import Path
+import dj_database_url
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -14,15 +15,8 @@ MANAGERS = ADMINS
 PROJECT_DIR = Path(__file__).parent
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': PROJECT_DIR.child('database.db'),                      # Or path to database file if using sqlite3.
-        # The following settings are not used with sqlite3:
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
-    }
+    'default': dj_database_url.config(
+        default='sqlite:///' + PROJECT_DIR.child('database.db'))
 }
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
