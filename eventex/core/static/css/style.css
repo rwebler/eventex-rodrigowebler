@@ -1,0 +1,14 @@
+#content {
+    width:66%;
+    margin: 0 auto;
+}
+
+img {
+    border:0;
+    display: block;
+    margin: 0 auto;
+}
+h1, p {
+    color:green;
+    text-align: center;
+}
