@@ -13,10 +13,7 @@ from django.test import TestCase
 
 class SimpleTest(TestCase):
     def setUp(self):
-        self.resp = self.client.get('/')
+        self.resp = self.client.get('/inscricao')
 
     def test_get(self):
         self.assertEqual(200, self.resp.status_code)
-
-    def test_template(self):
-        self.assertTemplateUsed(self.resp, 'index.html')
