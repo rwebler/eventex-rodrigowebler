@@ -17,3 +17,7 @@ class SimpleTest(TestCase):
 
     def test_get(self):
         self.assertEqual(200, self.resp.status_code)
+
+    def test_template(self):
+        'Response should be a rendered template'
+        self.assertTemplateUsed(self.resp, 'subscriptions/subscription_form.html')
