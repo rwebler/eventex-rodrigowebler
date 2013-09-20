@@ -1,0 +1,19 @@
+{% load i18n %}
+<!doctype html>
+<html>
+<head>
+    <title>EventeX</title>
+    <link type="text/css" href="{{ STATIC_URL }}css/style.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+    <div id="page">
+        <div id="header">EventeX</div>
+        <div id="content">
+            {% block content %}
+            {% endblock content %}
+        </div>
+        <div id="footer">&copy; WTTD 2013</div>
+    </div>
+</body>
+</html>
+

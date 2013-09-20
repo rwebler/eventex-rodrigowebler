@@ -1,16 +1,10 @@
+{% extends 'base.html' %}
 {% load i18n %}
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html>
-<head>
-    <title>EventeX</title>
-    <link type="text/css" href="{{ STATIC_URL }}css/style.css" rel="stylesheet" media="screen" />
-</head>
-<body>
-    <div id="content">
+
+{% block content %}
 	<img src="{{ STATIC_URL }}img/logo.png" />
 	<h1>{% trans "Bem-vindo ao Eventex" %}</h1>
 	<p>{% trans "O evento mais fantástico do ano depois do Dev in Rio!" %}</p>
-    </div>
-</body>
-</html>
-
+	<p>{% trans "Você não pode perder esta oportunidade!" %}</p>
+	<p><strong><a href="/inscricao/">{% trans "Inscreva-se já!" %}</a></strong></p>
+{% endblock content %}
