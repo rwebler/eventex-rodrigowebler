@@ -1,19 +1,37 @@
 {% load i18n %}
-<!doctype html>
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<!DOCTYPE html>
 <html>
 <head>
     <title>EventeX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" href="{{ STATIC_URL }}css/style.css" rel="stylesheet" media="screen" />
 </head>
 <body>
-    <div id="page">
-        <div id="header">EventeX</div>
-        <div id="content">
-            {% block content %}
-            {% endblock content %}
+    <header>
+        <div class="container">
+            <div class="row">
+                {% block header %}<div class="col-md-6"><h1>EventeX</h1></div>{% endblock header %}
+            </div>
         </div>
-        <div id="footer">&copy; WTTD 2013</div>
-    </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                {% block content %}
+                {% endblock content %}
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">&copy; 2013 WTTD</div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
 

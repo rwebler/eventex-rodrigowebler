@@ -1,31 +1,17 @@
 {% extends 'base.html' %}
 
 {% load i18n %}
+{% load bootstrap3 %}
 
 {% block content %}
 <h1>Formulário de inscrição</h1>
 <form action="." method="POST">
     {% csrf_token %}
-    <div>
-        <label for="{{ form.name.id_for_label }}">{{ form.name.label }}:</label>
-        {{ form.name }}
-        {{ form.name.errors }}
-    </div>
-    <div>
-        <label for="{{ form.cpf.id_for_label }}">{{ form.cpf.label }}:</label>
-        {{ form.cpf }}
-        {{ form.cpf.errors }}
-    </div>
-    <div>
-        <label for="{{ form.email.id_for_label }}">{{ form.email.label }}:</label>
-        {{ form.email }}
-        {{ form.email.errors }}
-    </div>
-    <div>
-        <label for="{{ form.phone.id_for_label }}">{{ form.phone.label }}:</label>
-        {{ form.phone }}
-        {{ form.phone.errors }}
-    </div>
-    <input type="submit" value="Enviar" class="button" />
+    {% bootstrap_form form %}
+    {% bootstrap_form_buttons %}
+            <button type="submit" class="btn btn-primary">
+                    {% bootstrap_icon "star" %} Submit
+            </button>
+    {% end_bootstrap_form_buttons %}
 </form>
 {% endblock content %}
