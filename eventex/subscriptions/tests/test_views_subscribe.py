@@ -10,6 +10,7 @@ Replace this with more appropriate tests for your application.
 
 from django.test import TestCase
 from eventex.subscriptions.forms import SubscriptionForm
+from eventex.subscriptions.models import Subscription
 
 
 class SubscribeTest(TestCase):
@@ -39,3 +40,37 @@ class SubscribeTest(TestCase):
         'Context must have the subscription form.'
         form = self.resp.context['form']
         self.assertIsInstance(form, SubscriptionForm)
+
+
+class SubscribePostTest(TestCase):
+    def setUp(self):
+        data = dict(name='Henrique Bastos', cpf='12345678901',
+                    email='henrique@bastos.net', phone='21-96186180')
+        self.resp = self.client.post('/inscricao/', data)
+
+    def test_post(self):
+        'Valid POST should redirect to /inscricao/1'
+        self.assertEqual(302, self.resp.status_code)
+
+    def test_save(self):
+        'Valid POST must be saved.'
+        self.assertTrue(Subscription.objects.exists())
+
+
+class SubscribeInvalidPostTest(TestCase):
+    def setUp(self):
+        data = dict(name='Henrique Bastos', cpf='345678901234',
+                    email='henrique@bastos.net', phone='21-96186180')
+        self.resp = self.client.post('/inscricao/', data)
+
+    def test_post(self):
+        'Invalid POST should not redirect.'
+        self.assertEqual(200, self.resp.status_code)
+
+    def test_form_errors(self):
+        'Form must contain errors.'
+        self.assertTrue(self.resp.context['form'].errors)
+
+    def test_dont_save(self):
+        'Do not save data.'
+        self.assertFalse(Subscription.objects.exists())
