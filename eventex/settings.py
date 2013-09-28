@@ -38,14 +38,14 @@ TIME_ZONE = 'America/Sao_Paulo'
 ugettext = lambda s: s
 
 LANGUAGES = (
-    ('pt-br', ugettext('Portuguese')),
+    ('pt-BR', ugettext('Portuguese')),
     ('en', ugettext('English')),
 )
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
 #LANGUAGE_CODE = 'en'
-LANGUAGE_CODE = 'pt-br'
+LANGUAGE_CODE = 'pt-BR'
 
 SITE_ID = 1
 
@@ -135,7 +135,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'bootstrap3',
     # Uncomment the next line to enable the admin:
-    #'django.contrib.admin',
+    'django.contrib.admin',
     #'south',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
