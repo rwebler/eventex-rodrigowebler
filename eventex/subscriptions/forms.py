@@ -29,9 +29,17 @@ class SubscriptionForm(forms.ModelForm):
         name = self.cleaned_data['name']
         words = name.split()
         for index, word in enumerate(words):
-            if word.lower() in no_capitalize:
+            if word.lower() not in no_capitalize:
                 words[index] = word.capitalize()
             else:
                 words[index] = word.lower()
         capitalized_name = ' '.join(words)
         return capitalized_name
+
+    def clean(self):
+        super(SubscriptionForm, self).clean()
+
+        if not self.cleaned_data.get('email') and not self.cleaned_data.get('phone'):
+            raise ValidationError(_(u'Informe seu e-mail ou telefone'))
+
+        return self.cleaned_data
