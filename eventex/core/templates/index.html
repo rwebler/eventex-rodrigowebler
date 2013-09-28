@@ -8,5 +8,5 @@
 	<h1>{% trans "Bem-vindo ao Eventex" %}</h1>
 	<p>{% trans "O evento mais fantástico do ano depois do Dev in Rio!" %}</p>
 	<p>{% trans "Você não pode perder esta oportunidade!" %}</p>
-	<p><strong><a href="/inscricao/">{% trans "Inscreva-se já!" %}</a></strong></p>
+	<p><strong><a href="{% url 'subscriptions:subscribe' %}">{% trans "Inscreva-se já!" %}</a></strong></p>
 {% endblock content %}

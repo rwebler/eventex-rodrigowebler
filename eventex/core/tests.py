@@ -9,11 +9,12 @@ Replace this with more appropriate tests for your application.
 """
 
 from django.test import TestCase
+from django.core.urlresolvers import reverse as r
 
 
 class SimpleTest(TestCase):
     def setUp(self):
-        self.resp = self.client.get('/')
+        self.resp = self.client.get(r('core:homepage'))
 
     def test_get(self):
         self.assertEqual(200, self.resp.status_code)

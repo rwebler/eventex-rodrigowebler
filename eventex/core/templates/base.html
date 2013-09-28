@@ -12,23 +12,34 @@
 <body>
     <header>
         <div class="container">
-            <div class="row">
-                {% block header %}<div class="col-md-6"><h1>EventeX</h1></div>{% endblock header %}
+            <div class="row">
+                <div class="col-md-2">&nbsp;</div>
+                <div class="col-md-8">{% block header %}<h1>EventeX</h1>{% endblock header %}</div>
+                <div class="col-md-2">&nbsp;</div>
             </div>
         </div>
     </header>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-2">&nbsp;</div>
+            <div class="col-md-8">
                 {% block content %}
                 {% endblock content %}
+            </div>
+            <div class="col-md-2">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                
             </div>
         </div>
     </div>
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">&copy; 2013 WTTD</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">&nbsp;</div>
+                <div class="col-md-8">&copy; 2013 WTTD</div>
+                <div class="col-md-2">&nbsp;</div>
             </div>
         </div>
     </footer>
