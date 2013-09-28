@@ -136,12 +136,14 @@ INSTALLED_APPS = (
     'bootstrap3',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
-    #'south',
+    'south',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'eventex.core',
     'eventex.subscriptions',
 )
+
+SOUTH_TESTS_MIGRATE = False
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
