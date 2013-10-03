@@ -3,6 +3,7 @@
 
 # coding: utf-8
 from django.shortcuts import render
+from django.shortcuts import get_object_or_404
 from eventex.core.models import Speaker
 
 
@@ -11,5 +12,6 @@ def homepage(request):
 
 
 def speaker_detail(request, slug):
-    context = {'speaker': Speaker()}
+    speaker = get_object_or_404(Speaker, slug=slug)
+    context = {'speaker': speaker}
     return render(request, 'core/speaker_detail.html', context)

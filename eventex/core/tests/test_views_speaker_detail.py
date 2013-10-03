@@ -8,6 +8,12 @@ from eventex.core.models import Speaker
 
 class SpeakerDetailTest(TestCase):
     def setUp(self):
+        Speaker.objects.create(
+            name='Henrique Bastos',
+            slug='henrique-bastos',
+            url='http://henriquebastos.net',
+            description='Passionate software developer!'
+            )
         url = r('core:speaker_detail', kwargs={'slug': 'henrique-bastos'})
         self.resp = self.client.get(url)
 
@@ -29,3 +35,10 @@ class SpeakerDetailTest(TestCase):
         'Speaker must be in context.'
         speaker = self.resp.context['speaker']
         self.assertIsInstance(speaker, Speaker)
+
+
+class SpeakerDetailNotFound(TestCase):
+    def test_not_found(self):
+        url = r('core:speaker_detail', kwargs={'slug': 'john-doe'})
+        response = self.client.get(url)
+        self.assertEqual(404, response.status_code)
