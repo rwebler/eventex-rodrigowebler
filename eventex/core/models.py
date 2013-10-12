@@ -36,9 +36,18 @@ class Contact(models.Model):
 
 
 class Talk(models.Model):
-    title = models.CharField(_('título'), max_length=200)
+    title = models.CharField(max_length=200)
     description = models.TextField()
     start_time = models.TimeField(blank=True)
+    speakers = models.ManyToManyField('Speaker', verbose_name=_('palestrante'))
+
+    class Meta:
+        verbose_name = _('palestra')
+        verbose_name_plural = _('palestras')
 
     def __unicode__(self):
         return self.title
+
+    @models.permalink
+    def get_absolute_url(self):
+        return ('core:speaker_detail', (), {'slug': self.slug})
