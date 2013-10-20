@@ -3,6 +3,7 @@
 
 from django.test import TestCase
 from eventex.core.models import Talk
+from eventex.core.managers import PeriodManager
 
 
 class TalkModelTest(TestCase):
@@ -22,3 +23,7 @@ class TalkModelTest(TestCase):
         'Talk has many Speakers and vice-versa.'
         self.talk.speakers.create(name='Henrique Bastos', slug='henrique-bastos', url='http://henriquebastos.net')
         self.assertEqual(1, self.talk.speakers.count())
+
+    def test_period_manager(self):
+        'Talk default manager must be instance of PeriodManager.'
+        self.assertIsInstance(Talk.objects, PeriodManager)

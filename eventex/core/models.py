@@ -3,7 +3,7 @@
 
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from eventex.core.managers import KindContactManager
+from eventex.core.managers import KindContactManager, PeriodManager
 
 
 class Speaker(models.Model):
@@ -44,6 +44,8 @@ class Talk(models.Model):
     description = models.TextField()
     start_time = models.TimeField(blank=True)
     speakers = models.ManyToManyField('Speaker', verbose_name=_('palestrante'))
+
+    objects = PeriodManager()
 
     class Meta:
         verbose_name = _('palestra')
