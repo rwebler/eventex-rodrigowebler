@@ -1,0 +1,320 @@
+................EEEEE...
+======================================================================
+ERROR: test_afternoon_talks_in_context (eventex.core.tests.test_views_talk_list.TalkListTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/action/workspace/eventex-rodrigowebler/eventex/core/tests/test_views_talk_list.py", line 24, in setUp
+    self.resp = self.client.get(r('core:talk_list'))
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/client.py", line 453, in get
+    response = super(Client, self).get(path, data=data, **extra)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/client.py", line 279, in get
+    return self.request(**r)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/client.py", line 424, in request
+    six.reraise(*exc_info)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/eventex-rodrigowebler/eventex/core/views.py", line 27, in talk_list
+    return render(request, 'core/talk_list.html', context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/shortcuts/__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader.py", line 177, in render_to_string
+    return t.render(context_instance)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/utils.py", line 66, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 124, in render
+    return compiled_parent._render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/utils.py", line 66, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 189, in render
+    nodelist.append(node.render(context))
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 156, in render
+    return self.render_template(self.template, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 138, in render_template
+    output = template.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/utils.py", line 66, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 189, in render
+    nodelist.append(node.render(context))
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 418, in render
+    url = reverse(project_name + '.' + view_name,
+TypeError: coercing to Unicode: need string or buffer, Speaker found
+
+======================================================================
+ERROR: test_get (eventex.core.tests.test_views_talk_list.TalkListTest)
+GET must result in 200
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/action/workspace/eventex-rodrigowebler/eventex/core/tests/test_views_talk_list.py", line 24, in setUp
+    self.resp = self.client.get(r('core:talk_list'))
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/client.py", line 453, in get
+    response = super(Client, self).get(path, data=data, **extra)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/client.py", line 279, in get
+    return self.request(**r)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/client.py", line 424, in request
+    six.reraise(*exc_info)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/eventex-rodrigowebler/eventex/core/views.py", line 27, in talk_list
+    return render(request, 'core/talk_list.html', context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/shortcuts/__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader.py", line 177, in render_to_string
+    return t.render(context_instance)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/utils.py", line 66, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 124, in render
+    return compiled_parent._render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/utils.py", line 66, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 189, in render
+    nodelist.append(node.render(context))
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 156, in render
+    return self.render_template(self.template, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 138, in render_template
+    output = template.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/utils.py", line 66, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 189, in render
+    nodelist.append(node.render(context))
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 418, in render
+    url = reverse(project_name + '.' + view_name,
+TypeError: coercing to Unicode: need string or buffer, Speaker found
+
+======================================================================
+ERROR: test_html (eventex.core.tests.test_views_talk_list.TalkListTest)
+HTML should list talks.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/action/workspace/eventex-rodrigowebler/eventex/core/tests/test_views_talk_list.py", line 24, in setUp
+    self.resp = self.client.get(r('core:talk_list'))
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/client.py", line 453, in get
+    response = super(Client, self).get(path, data=data, **extra)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/client.py", line 279, in get
+    return self.request(**r)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/client.py", line 424, in request
+    six.reraise(*exc_info)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/eventex-rodrigowebler/eventex/core/views.py", line 27, in talk_list
+    return render(request, 'core/talk_list.html', context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/shortcuts/__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader.py", line 177, in render_to_string
+    return t.render(context_instance)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/utils.py", line 66, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 124, in render
+    return compiled_parent._render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/utils.py", line 66, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 189, in render
+    nodelist.append(node.render(context))
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 156, in render
+    return self.render_template(self.template, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 138, in render_template
+    output = template.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/utils.py", line 66, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 189, in render
+    nodelist.append(node.render(context))
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 418, in render
+    url = reverse(project_name + '.' + view_name,
+TypeError: coercing to Unicode: need string or buffer, Speaker found
+
+======================================================================
+ERROR: test_morning_talks_in_context (eventex.core.tests.test_views_talk_list.TalkListTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/action/workspace/eventex-rodrigowebler/eventex/core/tests/test_views_talk_list.py", line 24, in setUp
+    self.resp = self.client.get(r('core:talk_list'))
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/client.py", line 453, in get
+    response = super(Client, self).get(path, data=data, **extra)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/client.py", line 279, in get
+    return self.request(**r)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/client.py", line 424, in request
+    six.reraise(*exc_info)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/eventex-rodrigowebler/eventex/core/views.py", line 27, in talk_list
+    return render(request, 'core/talk_list.html', context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/shortcuts/__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader.py", line 177, in render_to_string
+    return t.render(context_instance)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/utils.py", line 66, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 124, in render
+    return compiled_parent._render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/utils.py", line 66, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 189, in render
+    nodelist.append(node.render(context))
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 156, in render
+    return self.render_template(self.template, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 138, in render_template
+    output = template.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/utils.py", line 66, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 189, in render
+    nodelist.append(node.render(context))
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 418, in render
+    url = reverse(project_name + '.' + view_name,
+TypeError: coercing to Unicode: need string or buffer, Speaker found
+
+======================================================================
+ERROR: test_template (eventex.core.tests.test_views_talk_list.TalkListTest)
+Template should be core/talk_list.html
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/action/workspace/eventex-rodrigowebler/eventex/core/tests/test_views_talk_list.py", line 24, in setUp
+    self.resp = self.client.get(r('core:talk_list'))
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/client.py", line 453, in get
+    response = super(Client, self).get(path, data=data, **extra)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/client.py", line 279, in get
+    return self.request(**r)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/client.py", line 424, in request
+    six.reraise(*exc_info)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/eventex-rodrigowebler/eventex/core/views.py", line 27, in talk_list
+    return render(request, 'core/talk_list.html', context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/shortcuts/__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader.py", line 177, in render_to_string
+    return t.render(context_instance)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/utils.py", line 66, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 124, in render
+    return compiled_parent._render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/utils.py", line 66, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 189, in render
+    nodelist.append(node.render(context))
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 156, in render
+    return self.render_template(self.template, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 138, in render_template
+    output = template.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/test/utils.py", line 66, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 189, in render
+    nodelist.append(node.render(context))
+  File "/home/action/workspace/eventex-rodrigowebler/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 418, in render
+    url = reverse(project_name + '.' + view_name,
+TypeError: coercing to Unicode: need string or buffer, Speaker found
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.173s
+
+FAILED (errors=5)
+Creating test database for alias 'default'...
+Destroying test database for alias 'default'...
