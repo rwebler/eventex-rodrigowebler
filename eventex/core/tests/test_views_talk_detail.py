@@ -26,12 +26,6 @@ class TalkDetailTest(TestCase):
         response = self.client.get(r('core:talk_detail', args=[0]))
         self.assertEqual(404, response.status_code)
 
-    def test_videos_in_context(self):
-        self.assertIn('videos', self.resp.context)
-
-    def test_slides_in_context(self):
-        self.assertIn('slides', self.resp.context)
-
     def test_html(self):
         self.assertContains(self.resp, 'Talk')
         self.assertContains(self.resp, '/palestrantes/henrique-bastos/')
